@@ -1,0 +1,22 @@
+public boolean canBalance(int[] nums) {
+  
+    boolean result=true;
+        int len= nums.length;
+        int sum=0;
+        int i=0;
+        int l=0;
+
+
+        for(int j=0; j<len; j++){
+             sum+=nums[j];
+        }
+        for (i=0;i<len;i++) {
+            l += nums[i];
+            if(l!=(sum-l)) {
+                result = false;
+            }else{result=true;
+                break;
+            }
+        }
+        return result;
+}
